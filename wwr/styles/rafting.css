@@ -209,6 +209,171 @@ footer p {
   padding: 0;
 }
 
+.page-title {
+  position: static;
+  margin: 1.5rem 0;
+  padding: 0;
+  background: none;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.contact-overview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  gap: 1.5rem;
+}
+
+.contact-details {
+  padding: 1rem;
+}
+
+.contact-details p {
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.contact-details address {
+  font-style: normal;
+}
+
+.contact-details a {
+  color: var(--primary-color);
+}
+
+.contact-map iframe {
+  display: block;
+  width: 100%;
+  min-height: 280px;
+  height: 100%;
+  border: 0;
+}
+
+.employee-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.trip-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.trip-list article {
+  margin: 0;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.trip-list img {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.trip-list h3 {
+  margin: 0.75rem 0;
+  color: var(--primary-color);
+  font-family: var(--heading-font);
+}
+
+.trip-list p {
+  margin: 0.5rem 0;
+  padding: 0;
+}
+
+.employee-grid figcaption span {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--accent1-color);
+  font-family: var(--body-font);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.message-section form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-fields {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.form-label {
+  font-weight: 700;
+}
+
+.form-fields input[type="text"],
+.form-fields input[type="email"],
+.form-fields textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #52666a;
+  border-radius: 0.2rem;
+  background-color: #fff;
+  color: var(--accent1-color);
+  font: inherit;
+}
+
+.form-fields input:focus,
+.form-fields textarea:focus {
+  outline: 2px solid var(--secondary-color);
+}
+
+.message-purpose {
+  display: grid;
+  gap: 0.4rem;
+  margin: 0.5rem 0;
+  padding: 0.75rem 1rem;
+  border: 1px solid #52666a;
+}
+
+.message-purpose legend {
+  padding: 0 0.3rem;
+  font-weight: 700;
+}
+
+.message-purpose label,
+.newsletter-option {
+  display: block;
+  margin: 0.4rem 0;
+}
+
+.message-purpose input,
+.newsletter-option input {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-right: 0.4rem;
+  vertical-align: middle;
+}
+
+.form-fields button {
+  margin-top: 0.5rem;
+  padding: 0.75rem 1.4rem;
+  border: 0;
+  border-radius: 0.2rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.form-fields button:hover,
+.form-fields button:focus {
+  background-color: var(--accent1-color);
+}
+
+.form-fields button:focus {
+  outline: 2px solid var(--secondary-color);
+}
+
 @media (max-width: 650px) {
   header {
     grid-template-columns: 1fr;
@@ -232,12 +397,19 @@ footer p {
   }
 
   .history-grid,
-  .adventures {
+  .adventures,
+  .contact-overview,
+  .employee-grid,
+  .trip-list {
     grid-template-columns: 1fr;
   }
 
+  .employee-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .adventures {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr 1fr;
   }
 
   footer {
@@ -247,7 +419,8 @@ footer p {
 }
 
 @media (max-width: 400px) {
-  .adventures {
+  .adventures,
+  .employee-grid {
     grid-template-columns: 1fr;
   }
 }
